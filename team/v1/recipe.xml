@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<templateset name="team_page" name_friendly="Team Page" view="team-page">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" />
+				<wysiwyg_advanced name="description" name_friendly="Optional Team Description" />
+				<images name="image" name_friendly="Optional Team Image" limit="1" />
+			</fields>
+			
+			<items>
+				<item link_title="Our Team" path_part="team">
+					<title><![CDATA[Our Team]]></title>
+					<description><![CDATA[<p>The Beatles were an English rock band formed in Liverpool in 1960. Their best-known lineup, consisting of John Lennon, Paul McCartney, George Harrison, and Ringo Starr, became the greatest and most influential act of the rock era, introducing more innovations into popular music than any other rock band of the 20th century. (<a href="http://en.wikipedia.org/wiki/The_Beatles">source</a>)</p>]]></description>
+					<image><![CDATA[]]></image>
+				</item>
+			</items>
+		</templateset>
+		
+		<pageset name="team_member" name_friendly="Team Members" parent_item="team" view="team-member-page" >
+			<fields>
+				<text name="name" name_friendly="Name" required="1" list="1"  />
+				<text name="title" name_friendly="Title" list="1" />
+				<images name="image" name_friendly="Image" list="1" limit="1" />
+				<wysiwyg_advanced name="description" name_friendly="Description" />
+				<wysiwyg_advanced name="misc" name_friendly="Misc. Info" />
+				<wysiwyg_basic name="education" name_friendly="Education" />
+				<text name="phone" name_friendly="Phone Number" list="1" />
+				<text name="email" name_friendly="Email" list="1" />
+				<text name="location" name_friendly="Location" />
+				<sort name="sort" name_friendly="Sort Order" list="1" />
+			</fields>
+						
+			<items>
+				<item link_title="John Lennon" path_part="john-lennon" parent="team">
+					<name><![CDATA[John Lennon]]></name>
+					<title><![CDATA[Bassist, Writer]]></title>
+					<image><![CDATA[https://b64d8ceea21aaf2a6e01-2dc0b1b1038915cc64f54354367e7400.ssl.cf2.rackcdn.com/or-john_lennon_ny_1964.png]]></image>
+					<description><![CDATA[<p>John Winston Ono Lennon, MBE was an English musician, singer and songwriter who rose to worldwide fame as a founder member of the Beatles, one of the most commercially successful and critically acclaimed acts in the history of popular music.</p>]]></description>
+					<misc><![CDATA[<p></p>]]></misc>
+					<email><![CDATA[john@lennon.com]]></email>
+					<sort><![CDATA[1]]></sort>
+				</item>
+				<item link_title="George Harrison" path_part="george-harrison" parent="team">
+					<name><![CDATA[George Harrison]]></name>
+					<title><![CDATA[Guitarist, Writer]]></title>
+					<image><![CDATA[https://b64d8ceea21aaf2a6e01-2dc0b1b1038915cc64f54354367e7400.ssl.cf2.rackcdn.com/or-george_harrison_ny_1964.png]]></image>
+					<description><![CDATA[<p>George Harrison, MBE was an English musician, singer and songwriter who achieved international fame as the lead guitarist of the Beatles.</p>]]></description>
+					<misc><![CDATA[<p></p>]]></misc>
+					<education><![CDATA[<p>Dovedale Primary School<br />Liverpool Institute, 1954 - 1959</p>]]></education>
+					<phone><![CDATA[392-555-1239]]></phone>
+					<email><![CDATA[george@harrison.com]]></email>
+					<location><![CDATA[Liverpool, England]]></location>
+					<sort><![CDATA[2]]></sort>
+				</item>
+				<item link_title="Paul McCartney" path_part="paul-mccartney" parent="team">
+					<name><![CDATA[Paul McCartney]]></name>
+					<title><![CDATA[Composer, All Instruments, Writer]]></title>
+					<image><![CDATA[https://b64d8ceea21aaf2a6e01-2dc0b1b1038915cc64f54354367e7400.ssl.cf2.rackcdn.com/or-paul_mccartney_ny_1964.png]]></image>
+					<description><![CDATA[<p>Sir James Paul McCartney, MBE is an English musician, singer, songwriter, multi-instrumentalist and composer.</p>]]></description>
+					<misc><![CDATA[<p></p>]]></misc>
+					<email><![CDATA[paul@mccartney.com]]></email>
+					<sort><![CDATA[3]]></sort>
+				</item>
+				<item link_title="Ringo Starr" path_part="ringo-starr" parent="team">
+					<name><![CDATA[Ringo Starr]]></name>
+					<title><![CDATA[Drummer]]></title>
+					<image><![CDATA[https://b64d8ceea21aaf2a6e01-2dc0b1b1038915cc64f54354367e7400.ssl.cf2.rackcdn.com/or-ringo_starr_ny_1964.png]]></image>
+					<description><![CDATA[<p>Ringo Starr, MBE is an English musician, singer, songwriter and actor who gained worldwide fame as the drummer for the Beatles.</p>]]></description>
+					<misc><![CDATA[<p></p>]]></misc>
+					<email><![CDATA[ringo@starr.com]]></email>
+					<sort><![CDATA[4]]></sort>
+				</item>
+			</items>
+		</pageset>	
+	</ingredients>
+</recipe>

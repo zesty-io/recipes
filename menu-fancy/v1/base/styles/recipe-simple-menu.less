@@ -1,0 +1,98 @@
+.menu-page {
+	position:relative;
+	background: @sidebar-bg-color;
+	
+	&.recipe-wrap {padding:0;}
+	
+	.menu-content {
+		padding:@default-spacing;
+		background:@content-bg-color;
+		min-height:460px;
+	}
+	.menu-cats {
+		
+		
+		
+		.menu-image-wrap {
+			text-align:center;
+			
+			img {width:75%;}
+			
+			h3 {
+				position:relative;
+				bottom:20px;
+			}
+		}
+		a {
+			
+			&:hover {opacity:0.9;}
+		}
+	}
+	
+	.sub-menu {
+		
+		h5 {
+			display:none;
+		}
+		
+		ul#sub-navigation {
+			margin:(@default-spacing*1.5) 0;
+			@media screen and (max-width:495px) { margin:0; }
+			text-align:center;
+			//width:215px;
+			li {
+				list-style:none;
+				margin:0;
+				//width:215px;
+				
+				a {
+					display:block;
+					//background:#000;
+					width:100%;
+					@media screen and (max-width:495px) { width:48%; float:left; }
+					padding:(@default-spacing*.9) 0;
+					@media screen and (max-width:495px) { padding:1%; }
+					color:#fff;
+					width:110%;
+					
+					&:hover {
+						background:darken(@sidebar-bg-color,5%);
+						
+						transition:none;
+					}
+					
+				}
+			}
+		}
+		
+	}
+	
+	.menu-items {
+		
+		h3 {	
+			border-bottom: 1px solid darken(@content-bg-color, 10%);
+			margin: (@default-spacing/4) auto;
+			cursor: pointer;
+			padding: (@default-spacing / 2) 0px;
+			
+		}
+		
+		.category-items {
+			border-top: none;
+			margin: -5px auto 15px auto;
+			
+			.item {
+				padding: (@default-spacing / 2) 0px;
+				
+				&:first-child {
+					border-top: none;
+				}
+				
+				.price {
+					text-align: left;
+					font-weight: 100;
+				}
+			}
+		}
+	}
+}

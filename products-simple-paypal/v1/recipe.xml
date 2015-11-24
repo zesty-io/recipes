@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<!-- Categories Page -->	
+		<templateset name="products_page" name_friendly="Products" view="products_page">
+			<fields>
+				<text name="title" name_friendly="Products Page Title" required="1" />
+				<textarea name="description" name_friendly="Products Page Description" />
+			</fields>
+
+			<items>
+				<item link_title="Products" path_part="products">
+					<title><![CDATA[Our Products]]></title>
+					<description><![CDATA[These are our products]]></description>
+				</item>
+			</items>
+		</templateset>
+
+		
+		<!-- Categories Page Set -->	
+		<pageset name="simple_product" name_friendly="Paypal Products" parent_item="products" view="product">
+			<fields>
+				<text name="product_title" name_friendly="Product Title" required="1" list="1" />
+				<wysiwyg_advanced name="product_description" name_friendly="Product Description" />
+				<text name="brand" name_friendly="Brand" list="1" />
+				<currency name="price" name_friendly="Price" list="1" />
+				<currency name="shipping_cost" name_friendly="Shipping Cost" list="1" />
+				<text name="sku" name_friendly="SKU" list="1" />
+				<images name="main_image" name_friendly="Main Image" list="1" limit="1" />
+				<images name="additional_images" name_friendly="Additional Images" limit="6" />
+				<sort name="sort" name_friendly="Sort Order" list="1" sort_table="1" />
+			</fields>
+			
+			<items>
+				
+				<item link_title="TEst PRoduct" path_part="test-product" parent="products">
+					<product_title><![CDATA[TEst PRoduct]]></product_title>
+					<product_description><![CDATA[<p>Organic, Biodegradable Plates. <br />Made from the leaves of the Sal Tree. <br />Hand selected and hot pressed. <br />Stitched together with bamboo or thread. <br />Culturally used.<br />Great for hor d'oeuvres, appetizers, snacks, sushi... and more. <br />Beautiful, soft color accompanied by a subtle, rich aroma.</p>
+<p>&nbsp;</p>]]></product_description>
+					<brand><![CDATA[the brand]]></brand>
+					<price><![CDATA[4.00]]></price>
+					<shipping_cost><![CDATA[102.00]]></shipping_cost>
+					<sku><![CDATA[sad2]]></sku>
+					<main_image><![CDATA[https://41b04582dc1b9700da46-735a2997c3bab13e4466214dafc51d8e.ssl.cf2.rackcdn.com/or-5311528896_b07acebb2a_o.jpg]]></main_image>
+					<additional_images><![CDATA[]]></additional_images>
+					<sort_order><![CDATA[1]]></sort_order>
+				</item>			
+				
+			</items>
+		</pageset>
+	</ingredients>
+</recipe>

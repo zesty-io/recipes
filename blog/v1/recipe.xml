@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+
+	<settings>
+		<number name="main_page_limit" name_friendly="Number of Articles to Show on the Main Page"><![CDATA[5]]></number>
+		<number name="category_limit" name_friendly="Number of Categories to show on the side bar"><![CDATA[7]]></number>
+		<number name="recent_articles_limit" name_friendly="Number of Recent Articles to show on the side bar"><![CDATA[3]]></number>
+		<text name="main_page_article_text" name_friendly="Main Page Article Text"><![CDATA[Recent Articles]]></text>
+	</settings>
+	
+	
+	<ingredients>
+		
+		<!-- BLOG MAIN PAGE -->
+		<templateset name="blog_main_page" name_friendly="Blog" view="blog-main-page">
+			<fields>
+				<text name="title" name_friendly="Blog Title" required="1" />
+				<wysiwyg_advanced name="description" name_friendly="Blog Description" />
+			</fields>
+			
+			<items>
+				<item link_title="Blog" path_part="blog">
+					<title><![CDATA[Blog Home]]></title>
+					<description><![CDATA[<p>Please enter a description for your blog in the Blog page in Content</p>]]></description>
+				</item>
+			</items>
+		
+		</templateset>
+		
+		<!-- Authors Page -->	
+		<templateset name="blog_authors_page" name_friendly="Authors Page" parent_item="blog" view="blog-authors-page">
+			<fields>
+				<text name="title" name_friendly="Author Page Title" required="1" />
+				<wysiwyg_advanced name="description" name_friendly="Author Page Description" />
+			</fields>
+			
+			<items>
+				<item link_title="The Authors" path_part="authors" parent="blog">
+					<title><![CDATA[The Authors]]></title>
+					<description><![CDATA[<p>The blog contributors</p>]]></description>
+				</item>
+			</items>
+		</templateset>
+		
+		<!-- Authors Page Set -->
+		<pageset name="blog_author" name_friendly="Authors"  parent_item="authors" view="blog-author">
+			<fields>
+				<text name="name" name_friendly="Author Name" required="1" list="1" sort_table="1" />
+				<text name="email" name_friendly="Author Email" required="1" list="1" />
+				<images name="image" name_friendly="Author Photo" limit="1" required="1" list="1" />
+				<wysiwyg_advanced name="description" name_friendly="Author Description" required="1" />
+				<link name="link" name_friendly="Author Link" />
+				<text name="title" name_friendly="Author Title" />
+				<text name="company" name_friendly="Author Company" />				
+				<text name="google_author_id" name_friendly="Google Plus Author ID" />				
+			</fields>
+			
+			<items>
+				<item link_title="Default Author" path_part="default-author" parent="authors">
+					<name><![CDATA[Default Author]]></name>
+					<email><![CDATA[info@gozesty.com]]></email>
+					<image><![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-zesty-author.png]]></image>
+					<description><![CDATA[<p>I make life simple.</p>]]></description>
+					<link><![CDATA[http://learn.gozesty.com]]></link>
+					<title><![CDATA[Manager]]></title>
+					<company><![CDATA[Variable Action]]></company>
+				</item>
+			</items>
+		</pageset>
+
+		<!-- Categories Page -->	
+		<templateset name="blog_categories_page"  name_friendly="Category Page" parent_item="blog" view="blog-categories-page">
+			<fields>
+				<text name="title" name_friendly="Category Page Title" required="1" />
+				<wysiwyg_advanced name="description" name_friendly="Category Page Description" />
+			</fields>
+			
+			<items>
+				<item link_title="The Categories" path_part="categories" parent="blog">
+					<title><![CDATA[The Categories]]></title>
+					<description><![CDATA[<p>Listing of all the categories</p>]]></description>
+				</item>
+			</items>
+		</templateset>
+
+		
+		<!-- Categories Page Set -->	
+		<pageset name="blog_category" name_friendly="Article Categories" parent_item="blog" view="blog-category">
+			<fields>
+				<text name="name" name_friendly="Category Name" required="1"  list="1" />
+				<sort name="sort_order" name_friendly="Sort Order" list="1" sort_table="1" />
+			</fields>
+			
+			<items>
+				<item link_title="Example Category" path_part="example-category" parent="blog">
+					<name><![CDATA[Example Category]]></name>
+					<sort_order><![CDATA[1]]></sort_order>
+				</item>
+			</items>
+		
+		</pageset>
+		
+		<!-- Tags Page -->	
+		<templateset name="blog_tags_page" name_friendly="Tag Page" parent_item="blog" view="blog-tags-page">
+			<fields>
+				<text name="title" name_friendly="Tag Page Title" required="1" />
+				<wysiwyg_advanced name="description" name_friendly="Tag Page Description" />
+			</fields>
+			
+			<items>
+				<item link_title="Tags" path_part="tags" parent="blog">
+					<title><![CDATA[Tags]]></title>
+					<description></description>
+				</item>
+			</items>
+		</templateset>
+
+		
+		<!-- Tags Page Set -->	
+		<pageset name="blog_tag" name_friendly="Article Tags" parent_item="tags" view="blog-tag">
+			<fields>
+				<text name="name" name_friendly="Tag Name" required="1" list="1" />
+				<sort name="sort_order" name_friendly="Sort Order" list="1" sort_table="1" />
+			</fields>
+		</pageset>
+		
+		<!-- Articles Page Set-->		
+		<pageset name="blog_article" name_friendly="Articles"  parent_set="blog_category" view="blog-article">
+			<fields>
+				<text name="title" name_friendly="Article Title" required="1" list="1" />
+				<text name="sub_title" name_friendly="Article Sub Title" />
+				<wysiwyg_advanced name="article_body" name_friendly="Article Content" required="1" />
+				<images name="image" name_friendly="Article Image" list="1" />
+				<date name="date" name_friendly="Date" required="1" list="1" sort_table="1" sort_direction="DESC" />
+				<one_to_one name="author" name_friendly="Author" relationship="blog_author" relationship_field="name" required="1" list="1" />
+				<one_to_many name="tags" name_friendly="Article Tags" relationship="blog_tag" relationship_field="name" list="1" />
+			</fields>
+			
+			<items>
+				<item link_title="Example Post" path_part="test-post-1" parent="example-category">
+					<title><![CDATA[Test Post]]></title>
+					<sub_title><![CDATA[This is a test post subtitle!]]></sub_title>
+					<article_body>
+						<![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus, felis in viverra adipiscing, lorem felis commodo massa, sit amet mollis tellus turpis ac felis. Proin pretium tincidunt diam ut posuere. Praesent non odio tortor, in vehicula risus.</p>]]>
+					</article_body>
+					<author relate="1"><![CDATA[default-author]]></author>
+				</item>
+			</items>
+		</pageset>
+	</ingredients>
+</recipe>

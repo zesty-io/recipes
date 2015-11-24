@@ -1,0 +1,71 @@
+
+.person-wrap {
+	position: relative;	
+	
+	&:hover {
+		.face {
+			.opacity(0);
+		}
+		
+		.member {
+			z-index: 10;
+		}
+	}
+	
+	.face {
+		position: relative;
+		.opacity(100);
+		z-index: 5;
+		.transition(opacity 200ms ease);
+	}
+	
+	.member {
+		position: absolute;
+		vertical-align: middle;
+		text-align: center;
+		top: 20px;
+		width: 100%;
+		z-index: 1;
+	}
+	
+	@media screen and (max-width: 480px) {
+		.face {
+			display: block;
+			margin: 0px auto;
+		}
+		
+		&:hover {
+			.face {
+				.opacity(100);
+			}
+		}
+		.member {
+			position: relative;
+		}
+	}
+	
+}
+
+.about-middle {
+	background-size: cover;
+	padding: @default-spacing;
+}
+
+.quote{
+	text-align: center;
+}
+
+.quote-name{
+	text-align: center;
+	font-family: @default-font;
+	letter-spacing: 2px;
+	font-weight: @h4-font-weight*2;
+	margin: @h5-margin-bottom;
+	
+}
+
+
+
+
+
+

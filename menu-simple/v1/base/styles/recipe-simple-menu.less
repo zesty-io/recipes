@@ -1,0 +1,30 @@
+.menu-page {
+	
+	.menu-items {
+		
+		h3 {	
+			border-bottom: 1px solid darken(@content-bg-color, 10%);
+			margin: 5px auto;
+			cursor: pointer;
+			padding: (@default-spacing / 2) 0px;
+
+		}
+		
+		.category-items {
+			border-top: none;
+			margin: -5px auto 15px auto;
+			
+			.item {
+				padding: 10px 0px;
+				
+				&:first-child {
+					border-top: none;
+				}
+				
+				.price {
+					text-align: right;
+				}
+			}
+		}
+	}
+}

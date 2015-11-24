@@ -1,0 +1,153 @@
+/****************************************
+	BLOG PAGE CSS
+*****************************************/
+
+.blog{
+
+	.article-header{
+		
+		.top-social{
+			float: right;
+		}
+		
+	}
+	
+	.article-body{
+		
+		
+		img[align=right]{
+			margin: 0px 0px 10px 20px;	
+		}
+		
+		img[align=left]{
+			margin: 0px 20px 10px 0px;
+			max-width: 400px;
+			width: 100%;
+		}
+		
+	}
+	
+	.blog-next{
+		text-align: right;
+	}
+	
+	.blog-last{
+		text-align: left;
+	}	
+	
+	.article-footer{
+		clear:both;
+		padding: 20px 0px;
+		
+		.tags{
+			clear: both;
+			font-size: 12px;
+			
+			a{
+				text-decoration: none;
+				border: 1px darken(@sidebar-bg-color, 10%) solid;
+				padding: 3px 10px 4px 10px;
+				border-radius: 5px;
+				margin-left: 5px;
+				font-size: .9em;
+			}
+		}
+		
+		.permalink{
+			float:right;
+		}
+		
+		.blog-social{
+			margin-bottom: 15px;
+			
+			padding: 5px;
+			border-radius:5px;
+			border:1px darken(@sidebar-bg-color, 10%); solid;
+		}
+	}
+	
+	.author {
+		img {
+			float: left;
+			max-width: 130px;
+			margin: 0px @default-spacing @default-spacing 0px;
+		}
+	}
+	.article-comments{
+		padding: 10px 0px;	
+	}
+	
+	ul.article-listing{
+			
+		li{
+			list-style: none;
+			border-bottom: 1px darken(@sidebar-bg-color, 10%) solid;
+			padding-top: @default-spacing;
+		}
+		
+	}
+		
+	ul.recent-articles{
+	
+		li{
+			border-bottom: 1px darken(@sidebar-bg-color, 10%) solid;
+			
+			&:last-child{
+				border: none;	
+			}
+			
+			strong a{
+				font-weight: bold;
+			}
+			
+			p{
+				font-size: .8em;
+				margin-bottom: 5px;
+			}
+			
+			&:hover{
+				cursor: pointer;
+				.opacity(80);
+			}		
+		}
+	}
+	.author-profile{
+		.author-picture{
+			img{
+				width: 100%;	
+			}		
+		}
+		
+		.author-bio{
+			padding: 0px;
+			p{
+				text-indent: 0px;
+			}
+			
+		}
+		
+	}
+	
+	ul.other-articles-by-author{
+		
+		li{
+			list-style: none;
+			padding: 10px 0px;
+			border-top: 1px darken(@sidebar-bg-color, 10%) solid;
+			.transition(all 150ms ease);
+			strong a{
+				text-decoration: none;
+				
+			}
+			
+			&:hover{
+				cursor: pointer;
+			}	
+		}	
+	}
+
+}
+
+
+
+

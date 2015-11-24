@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<!-- Categories Page -->	
+		<templateset name="services_page" name_friendly="Services" view="services-page">
+			<fields>
+				<text name="title" name_friendly="Services Page Title" required="1" />
+				<wysiwyg_advanced name="description" name_friendly="Services Page Description" />
+				<images name="image" name_friendly="Services Image" limit="1" list="1" />
+			</fields>
+
+			<items>
+				<item link_title="Our Services" path_part="services">
+					<title><![CDATA[Our Services]]></title>
+					<description><![CDATA[<p>We specialize in a variety of services. Click a service below for more detail.</p>]]></description>
+				</item>
+			</items>
+		</templateset>
+
+		
+		<!-- Categories Page Set -->	
+		<pageset name="service" name_friendly="Service" parent_item="services" view="service-item-page">
+			<fields>
+				<text name="name" name_friendly="Service Name" required="1" list="1" />
+				<images name="image" name_friendly="Top Services Image" list="1" />
+				<wysiwyg_advanced name="description" name_friendly="Services Page Description" />
+				<sort name="sort_order" name_friendly="Sort Order" list="1" sort_table="1" />
+			</fields>
+			
+			<items>
+				
+				<item link_title="Web Development" path_part="web-development" parent="services">
+					<name><![CDATA[Web Development]]></name>
+					<description><![CDATA[<p>The Internet is a global system of interconnected computer networks that use the standard Internet protocol suite (often called TCP/IP, although not all applications use TCP) to serve billions of users worldwide. It is a network of networks that consists of millions of private, public, academic, business, and government networks, of local to global scope, that are linked by a broad array of electronic, wireless and optical networking technologies. The Internet carries an extensive range of information resources and services, such as the inter-linked hypertext documents of the World Wide Web (WWW) and the infrastructure to support email.</p>]]></description>
+					<sort_order>1</sort_order>
+					<image><![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-service-one.jpeg]]></image>
+				</item>
+				
+				<item link_title="Computer Repair" path_part="computer-repair" parent="services">
+					<name><![CDATA[Computer Repair]]></name>
+					<description><![CDATA[<p>Computer programming (often shortened to programming, scripting, or coding) is the process of designing, writing, testing, debugging, and maintaining the source code of computer programs. This source code is written in one or more programming languages (such as Java, C++, C#, Python, etc.). The purpose of programming is to create a set of instructions that computers use to perform specific operations or to exhibit desired behaviors. The process of writing source code often requires expertise in many different subjects, including knowledge of the application domain, specialized algorithms and formal logic.</p>]]></description>
+					<sort_order>2</sort_order>
+					<image><![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-service-two.jpeg]]></image>
+				</item>				
+				
+			</items>
+		</pageset>
+	</ingredients>
+</recipe>

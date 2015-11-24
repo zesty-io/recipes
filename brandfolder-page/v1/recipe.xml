@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<settings>
+		<text name="brandfolder_user" name_friendly="Public brandfolder ID (Don't have one? Click &lt;a href='https://brandfolder.com/' target='_blank'&gt;here&lt;/a&gt;)">
+			<![CDATA[brandfolder]]>
+		</text>
+	</settings>
+	
+	<ingredients>
+		<!-- Simple Page Template Set -->	
+		<templateset name="brandfolder_page" name_friendly="Brandfolder Page" view="brandfolder-page">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" />
+				<text name="logos_title" name_friendly="Logos Title" />
+				<text name="images_title" name_friendly="Images Title" />
+				<text name="people_title" name_friendly="People Title" />
+			</fields>
+			
+			<items>
+				<item link_title="Brandfolder" path_part="brandfolder">
+					<title><![CDATA[Brandfolder Page]]></title>
+					<logos_title><![CDATA[Logos]]></logos_title>
+					<images_title><![CDATA[Images]]></images_title>
+					<people_title><![CDATA[People]]></people_title>
+				</item>
+			</items>
+		</templateset>	
+	</ingredients>
+</recipe>

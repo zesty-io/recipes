@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<!-- MENU MAIN PAGE -->
+		<templateset name="menu_page" name_friendly="Menu" view="menu-page">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" sort_table="1" />
+			</fields>
+
+			<items>
+				<item link_title="Menu" path_part="menu">
+					<title><![CDATA[The Menu]]></title>
+				</item>
+			</items>
+		
+		</templateset>
+		
+		<!-- MENU CATEGORIES -->	
+		<pageset name="menu_categories" name_friendly="Menu Categories" parent_item="menu" view="menu-categories">
+			<fields>
+				<images name="header_image" name_friendly="Header Image" list="1" />
+				<text name="name" name_friendly="Name" required="1" list="1" />
+				<textarea name="description" name_friendly="Description" />
+				<sort name="sort" name_friendly="Sort Order" list="1" required="1" sort_table="1" />
+			</fields>
+						
+			<items>
+				<item link_title="Specials" path_part="specials" parent="menu">
+					<header_image><![CDATA[https://d1f0ccf19c967503fd12-17f1536cc3161b86cb2b2572ff9c26b6.ssl.cf2.rackcdn.com/or-menu1.jpg]]></header_image>
+					<name><![CDATA[Specials]]></name>
+					<description><![CDATA[A Restaurant is a business establishment which prepares and serves food and drink to customers in return for money, either paid before the meal, after the meal, or with a running tab. Meals are generally served and eaten on premises, but many restaurants also offer take-out and food delivery services. Restaurants vary greatly in appearance and offerings, including a wide variety of the main chef's cuisines and service models.]]></description>
+					<sort><![CDATA[1]]></sort>
+				</item>
+				<item link_title="Appetizers" path_part="appetizers" parent="menu">
+					<header_image><![CDATA[https://d1f0ccf19c967503fd12-17f1536cc3161b86cb2b2572ff9c26b6.ssl.cf2.rackcdn.com/or-app.jpg]]></header_image>
+					<name><![CDATA[Appetizers]]></name>
+					<description><![CDATA[If there is an extended period between when guests arrive and when the meal is eaten (for example during a cocktail hour), these might also serve the purpose of sustaining guests during the wait, in the same way that apéritifs are served as a drink before meals.]]></description>
+					<sort><![CDATA[2]]></sort>
+				</item>
+				<item link_title="Entrees" path_part="entrees" parent="menu">
+					<header_image><![CDATA[https://d1f0ccf19c967503fd12-17f1536cc3161b86cb2b2572ff9c26b6.ssl.cf2.rackcdn.com/or-dinner.jpg]]></header_image>
+					<name><![CDATA[Entrees]]></name>
+					<description><![CDATA[A Restaurant is a business establishment which prepares and serves food and drink to customers in return for money, either paid before the meal, after the meal, or with a running tab. Meals are generally served and eaten on premises, but many restaurants also offer take-out and food delivery services. Restaurants vary greatly in appearance and offerings, including a wide variety of the main chef's cuisines and service models.]]></description>
+					<sort><![CDATA[3]]></sort>
+				</item>
+			</items>
+		
+		</pageset>
+		
+		<!-- Articles Page Set-->		
+		<dataset name="menu_items" name_friendly="Menu Items" parent_set="menu_categories">
+			<fields>
+				<text name="name" name_friendly="Name" required="1" list="1" sort_table="1" />
+				<one_to_one name="category" name_friendly="Category" relationship="menu_categories" relationship_field="name" list="1" />
+				<textarea name="description" name_friendly="Description" />
+				<currency name="price" name_friendly="Price" list="1" />
+				<sort name="sort" name_friendly="Sort Order" required="1" list="1" />
+			</fields>
+						
+			<items>
+				<item link_title="Pita Bread">
+					<name><![CDATA[Pita Bread]]></name>
+					<category relate="1"><![CDATA[appetizers]]></category>
+					<description><![CDATA[Dip it or enjoy it as is.]]></description>
+					<price><![CDATA[4.25]]></price>
+					<sort>1</sort>
+				</item>
+				<item link_title="Roast Beef Sandwich">
+					<name><![CDATA[Roast Beef Sandwich]]></name>
+					<category relate="1"><![CDATA[specials]]></category>
+					<description><![CDATA[Topped with lettuce and tomato, you'll be in heaven.]]></description>
+					<price><![CDATA[5.80]]></price>
+					<sort>2</sort>
+				</item>
+				<item link_title="Ham &amp; Eggs">
+					<name><![CDATA[Ham & Eggs]]></name>
+					<category relate="1"><![CDATA[specials]]></category>
+					<description><![CDATA[You will get some ham and you will get some eggs.]]></description>
+					<price><![CDATA[8.99]]></price>
+					<sort>1</sort>
+				</item>
+				<item link_title="Prime Rib">
+					<name><![CDATA[Prime Rib]]></name>
+					<category relate="1"><![CDATA[entrees]]></category>
+					<description><![CDATA[Best steak in town!]]></description>
+					<price><![CDATA[15.45]]></price>
+					<sort>1</sort>
+				</item>
+			</items>
+		</dataset>
+	</ingredients>
+</recipe>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<!-- Simple Page Template Set -->	
+		<templateset name="search_page" name_friendly="Search Page" view="search-page">
+			<fields>
+				<text name="search_header" name_friendly="Search Header" required="1" />
+				<text name="searched_header" name_friendly="Header after search was performed" />
+				<text name="form_label" name_friendly="Search Label" />
+				<text name="button_text" name_friendly="Button Text" required="1" />
+				<number name="search_limit" name_friendly="Number of results to display" />
+			</fields>
+			
+			<items>
+				<item link_title="Search" path_part="search">
+					<search_header><![CDATA[Search]]></search_header>
+					<searched_header><![CDATA[Results for ]]></searched_header>
+					<search_limit><![CDATA[10]]></search_limit>
+					<button_text><![CDATA[Search]]></button_text>
+				</item>
+			</items>
+		</templateset>	
+	</ingredients>
+</recipe>

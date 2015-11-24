@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<templateset name="gallery_page" name_friendly="Gallery" view="gallery-page">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" />
+				<wysiwyg_advanced name="content" name_friendly="Content" />
+			</fields>
+			
+			<items>
+				<item link_title="My Gallery" path_part="gallery">
+					<title><![CDATA[My Gallery]]></title>
+					<content><![CDATA[<p>Click on the images below to get a larger view.</p>]]></content>
+				</item>
+			</items>
+		
+		</templateset>
+		
+		<dataset name="gallery_image" name_friendly="Gallery Images" parent_item="gallery">
+			<fields>
+				<images name="image" name_friendly="Image" required="1" list="1" limit="1" />
+				<text name="title" name_friendly="Title" list="1" />
+				<textarea name="description" name_friendly="Description" />
+				<sort name="sort" name_friendly="Sort Order" required="1" sort_table="1" />
+			</fields>
+
+			<items>
+				<item>
+					<image><![CDATA[http://placehold.it/380x260]]></image>
+					<title><![CDATA[First Image]]></title>
+					<description><![CDATA[Grey image.]]></description>
+					<sort><![CDATA[1]]></sort>
+				</item>
+			</items>
+		
+		</dataset>	
+	</ingredients>
+</recipe>

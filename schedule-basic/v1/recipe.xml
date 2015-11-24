@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<!-- Simple Page Template Set -->	
+		<templateset name="schedule_basic" name_friendly="Schedule" view="schedule">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" />
+				<wysiwyg_advanced name="content" name_friendly="Page Content" />
+				<text name="hours_header_text" name_friendly="Hours Header Text" />
+				<text name="hours" name_friendly="Hours" />
+			</fields>
+			
+			<items>
+				<item link_title="Schedule" path_part="schedule">
+					<title><![CDATA[Our Schedule]]></title>
+					<content><![CDATA[<p>&nbsp; Monday-October, 21 - Sunday-October, 28:</p>
+<table style="height: 151px;" width="451">
+<tbody>
+<tr>
+<td>&nbsp;<strong>Time</strong></td>
+<td><strong>Class</strong></td>
+<td><strong>Instructor</strong></td>
+<td><strong>Location</strong></td>
+</tr>
+<tr>
+<td>6:00am-7:00 am</td>
+<td>Hot Power Fusion</td>
+<td>Melanie</td>
+<td>SD-Clairemont Mesa</td>
+</tr>
+<tr>
+<td>6:00am-7:00 am</td>
+<td>Hot Power Fusion</td>
+<td>Melanie</td>
+<td>SD-Clairemont Mesa</td>
+</tr>
+<tr>
+<td>6:00am-7:00 am</td>
+<td>Hot Power Fusion</td>
+<td>Melanie</td>
+<td>
+<p>SD-Clairemont Mesa</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>]]></content>
+					<hours_header_text><![CDATA[Open Hours]]></hours_header_text>
+					<hours><![CDATA[Monday - Friday: 8:00am - 10:00pm
+Saturday - Sunday: 10:00am - 6:00pm]]></hours>
+				</item>
+			</items>
+		</templateset>	
+	</ingredients>
+</recipe>

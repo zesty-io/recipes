@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		
+		<templateset name="portfolio_page" name_friendly="Portfolio" view="portfolio-page">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" />
+				<text name="second_title" name_friendly="Secondary Title" />
+				<wysiwyg_advanced name="content" name_friendly="Page Content" />
+			</fields>
+			
+			<items>
+				<item link_title="Our Portfolio" path_part="portfolio">
+					<title><![CDATA[Our Portfolio]]></title>
+					<second_title><![CDATA[View by Category]]></second_title>
+					<content><![CDATA[<p>Below shows off some of our creations.</p>]]></content>
+				</item>
+			</items>
+		</templateset>
+		
+		
+		<pageset name="portfolio_category" name_friendly="Portfolio Categories" parent_item="portfolio" view="portfolio-category">
+			<fields>
+				<text name="name" name_friendly="Name" required="1" list="1" />
+				<wysiwyg_advanced name="description" name_friendly="Description" />
+				<sort name="sort" name_friendly="Sort Order" list="1" sort_table="1" />
+			</fields>
+						
+			<items>
+				<item path_part="art-works" link_title="Art Works" parent="portfolio">
+					<name><![CDATA[Art Works]]></name>
+					<description><![CDATA[<p>Listing of art work</p>]]></description>
+					<sort><![CDATA[1]]></sort>
+				</item>
+				<item path_part="typography" link_title="Typography" parent="portfolio">
+					<name><![CDATA[Typography]]></name>
+					<description><![CDATA[<p>Listing of my typography</p>]]></description>
+					<sort><![CDATA[2]]></sort>
+				</item>
+			</items>
+		</pageset>
+
+
+		<pageset name="portfolio_item" name_friendly="Portfolio" parent_set="portfolio_category" view="portfolio-item">
+			<fields>
+				<text name="name" name_friendly="Name" required="1" list="1" />
+				<images name="main_image" name_friendly="Main Image" limit="1" list="1" />
+				<wysiwyg_advanced name="description" name_friendly="Description" />
+				<sort name="sort" name_friendly="Sort Order" list="1" required="1" sort_table="1" />
+			</fields>
+			
+			<items>
+				
+				<item link_title="Justo Malesuade" path_part="justo-malesuade" parent="art-works">
+					<name><![CDATA[Justo Malesuade Ullem]]></name>
+					<description><![CDATA[<p>Our business cards are the best.</p>]]></description>
+					<sort><![CDATA[1]]></sort>
+					<main_image><![CDATA[http://placehold.it/300x335]]></main_image>
+				</item>
+				
+				<item link_title="Donec Ulla" path_part="donec-ulla" parent="typography">
+					<name><![CDATA[Donec ullamcorper]]></name>
+					<description><![CDATA[<p>We also make flyers.</p>]]></description>
+					<sort><![CDATA[2]]></sort>
+					<main_image><![CDATA[http://placehold.it/300x335]]></main_image>
+				</item>	
+				
+				<item link_title="Glacos Mapte" path_part="glacos-mapte" parent="art-works">
+					<name><![CDATA[Glacos Mapte]]></name>
+					<description><![CDATA[<p>These are our books.</p>]]></description>
+					<sort><![CDATA[3]]></sort>
+					<main_image><![CDATA[http://placehold.it/300x335]]></main_image>
+				</item>				
+				
+			</items>
+			
+		
+		</pageset>
+	</ingredients>
+</recipe>

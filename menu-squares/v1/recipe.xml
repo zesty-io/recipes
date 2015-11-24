@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<!-- MENU MAIN PAGE -->
+		<templateset name="menu_page" name_friendly="Menu" view="menu-page">
+			<fields>
+				<text name="title" name_friendly="Page Title" />
+				<wysiwyg_advanced name="content" name_friendly="Page Content" />
+				<images name="image" name_friendly="Image" limit="1" />
+			</fields>
+
+			<items>
+				<item link_title="Menu" path_part="menu">
+					<title><![CDATA[What's on our Menu?]]></title>
+					<content>
+						<![CDATA[<p>Rising to confectionary fame in 16th-century France, the macaron brings plenty of taste and tradition to the table. Continuing a successful collaboration between Laura Hale and Amy Shippy, owners of Maison de Macarons, their imagination and passion for cooking has created macarons not only pleasing to the eye but to the palate as well. Beginning with almonds they freshly grind each day and using only the finest ingredients in these meringue-based cookies, Laura and Amy are bringing a bit of France to the low country and beyond. With flavors like cappuccino, salted caramel, raspberry, chocolate, coconut, peanut butter, pistachio, and so many more, their macaron recipes have built a legacy of their own at this quaint Skidaway Road patisserie.</p>]]>
+					</content>
+					<image><![CDATA[https://3e48657fa8b84cd51584-3a1b5f508a9841e4431f893a57c47ac2.ssl.cf2.rackcdn.com/or-dessert_display.jpg]]></image>
+				</item>
+			</items>
+		
+		</templateset>
+		
+		<!-- Menu Items -->		
+		<dataset name="menu_items" name_friendly="Menu Items" parent_item="menu">
+			<fields>
+				<text name="title" name_friendly="Title" required="1" list="1" />
+				<textarea name="description" name_friendly="Description" />
+				<images name="image" name_friendly="Image" list="1" limit="1" />
+				<sort name="sort" name_friendly="Sort Order" required="1" list="1" sort_table="1" />
+			</fields>
+						
+			<items>
+				<item link_title="Ham and Eggs">
+					<title><![CDATA[Blueberries Custard]]></title>
+					<description><![CDATA[Blueberries have the highest antioxidant capacity of all fresh fruit. Antioxidants are responsible for neutralizing free radicals in the body, which can affect aging and contraction of diseases.]]></description>
+					<image><![CDATA[https://3e48657fa8b84cd51584-3a1b5f508a9841e4431f893a57c47ac2.ssl.cf2.rackcdn.com/or-one1.jpg]]></image>
+					<sort>1</sort>
+				</item>
+				<item link_title="Strawberries">
+					<title><![CDATA[Strawberries]]></title>
+					<description><![CDATA[Something healthy. The flavor of a strawberry is influenced by weather, the variety and stage of ripeness when harvested.]]></description>
+					<image><![CDATA[https://3e48657fa8b84cd51584-3a1b5f508a9841e4431f893a57c47ac2.ssl.cf2.rackcdn.com/or-two.jpg]]></image>
+					<sort>2</sort>
+				</item>
+				<item link_title="Macaron">
+					<title><![CDATA[Macaron]]></title>
+					<description><![CDATA[The name of the cookie comes from an Italian word meaning paste, macaroon. While origins are uncertain, some culinary historians claim that macaroons can be traced to an Italian monastery.]]></description>
+					<image><![CDATA[https://3e48657fa8b84cd51584-3a1b5f508a9841e4431f893a57c47ac2.ssl.cf2.rackcdn.com/or-three.jpg]]></image>
+					<sort>3</sort>
+				</item>
+				<item link_title="Fruit tart">
+					<title><![CDATA[Fruit tart]]></title>
+					<description><![CDATA[Frosted Wild! Fruit Fusion toaster pastries celebrate the bright colors and delicious flavors of cherry, orange, strawberry, raspberry, blueberry and other fun fruits]]></description>
+					<image><![CDATA[https://3e48657fa8b84cd51584-3a1b5f508a9841e4431f893a57c47ac2.ssl.cf2.rackcdn.com/or-five.jpg]]></image>
+					<sort>4</sort>
+				</item>
+			</items>
+		</dataset>
+	</ingredients>
+</recipe>

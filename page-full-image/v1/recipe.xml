@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<!-- Simple Page Template Set -->	
+		<templateset name="page_full_image" name_friendly="Page with Full Image" view="page">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" />
+				<wysiwyg_advanced name="content" name_friendly="Page Content" />
+				<images name="image" name_friendly="Full Width Image" limit="1" />
+			</fields>
+			
+			<items>
+				<item link_title="Page" path_part="page">
+					<title><![CDATA[Poise Yoga 1]]></title>
+					<content><![CDATA[<p>This yoga class is ideal for anyone new to yoga and interested in its benefits. This beginner level Poise Yoga sequence will help you build strength, increase flexibility and find focus. Poise Yoga is a challenging and dynamic Vinyasa series, meaning breath is linked to movement. This Level 1 (C1) class is practiced in a warm (room temperature) studio and moderately paced so you will learn the fundamental Poise Yoga postures and principles that create a successful and effective yoga practice. Set to music, this class will invigorate your entire body.</p>]]></content>
+					<image><![CDATA[https://19d06dec3ad4f00d039e-11aff75c6410c232a4b6fccb550a0d19.ssl.cf2.rackcdn.com/or-instructor-image.jpg]]></image>
+				</item>
+			</items>
+		</templateset>	
+	</ingredients>
+</recipe>

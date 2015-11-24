@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<templateset name="team_page" name_friendly="Team Page" view="about-team-page">
+			<fields>
+				<text name="lead_in_title" name_friendly="Lead In Title" required="1" />
+				<text name="info_title" name_friendly="Info Title" required="1" />
+				<textarea name="team_info" name_friendly="Team Info" />
+				<textarea name="team_info_two" name_friendly="Team Info Two" />
+				<images name="team_image" name_friendly="Team Image" limit="1" />
+				<text name="quote" name_friendly="Quote" />
+				<text name="quote_name" name_friendly="Quote Name" />
+				<images name="second_team_image" name_friendly="Second Team Image" limit="1" />
+			</fields>
+			
+			<items>
+				<item link_title="Our Team" path_part="team">
+					<lead_in_title><![CDATA[About Mountain / <em>Let us introduce ourselves.</em>]]></lead_in_title>
+					<info_title><![CDATA[We work every day to improve the results of our clients.]]></info_title>
+					<team_info><![CDATA[David John "Dave" Matthews (b. January 9, 1967) is a South African-born American singer-songwriter, musician and actor, best known as the lead vocalist, songwriter, and guitarist for the Dave Matthews Band. He performs mainly with acoustic guitar and favors rhythm rather than solos in his playing. During the period from 2000 to 2010, his band, the Dave Matthews Band, sold more tickets and earned more money than any other act in North America.]]></team_info>
+					<team_info_two><![CDATA[Matthews focused primarily on songwriting and performances with the Dave Matthews Band from 1990 to 2003. Since that period, he has occasionally ventured outside the band in various solo performances and records. Matthews sang on the track "Sing Along" on Blue Man Group's second album The Complex in 2003.]]></team_info_two>
+					<team_image><![CDATA[https://e9dc2961c503596c2965-6120aced0fef31f8b6c8cd1145b567d3.ssl.cf2.rackcdn.com/or-team-image.jpg]]></team_image>
+					<quote><![CDATA["Some really cool and awesome and inspirational and fabulous quote."]]></quote>
+					<quote_name><![CDATA[<em>By this guy</em> - Whoever he is.]]></quote_name>
+					<second_team_image><![CDATA[https://e9dc2961c503596c2965-6120aced0fef31f8b6c8cd1145b567d3.ssl.cf2.rackcdn.com/or-second-team-image.jpg]]></second_team_image>
+				</item>
+			</items>
+		</templateset>
+		
+		<dataset name="team_member" name_friendly="Team Members" parent_item="team">
+			<fields>
+				<text name="name" name_friendly="Name" required="1" list="1" />
+				<text name="title" name_friendly="Title" list="1" />
+				<images name="image" name_friendly="Image" list="1" />
+				<wysiwyg_advanced name="description" name_friendly="Description" />
+				<text name="phone" name_friendly="Phone Number" list="1" />
+				<text name="email" name_friendly="Email" list="1" />
+				<sort name="sort" name_friendly="Sort Order" list="1" sort_table="1" />
+			</fields>
+
+			<items>
+				<item link_title="John Lennon">
+					<name><![CDATA[John Lennon]]></name>
+					<title><![CDATA[Bassist, Writer]]></title>
+					<image><![CDATA[https://b64d8ceea21aaf2a6e01-2dc0b1b1038915cc64f54354367e7400.ssl.cf2.rackcdn.com/or-john_lennon_ny_1964.png]]></image>
+					<sort><![CDATA[1]]></sort>
+				</item>
+				<item link_title="George Harrison">
+					<name><![CDATA[George Harrison]]></name>
+					<title><![CDATA[Guitarist, Writer]]></title>
+					<image><![CDATA[https://b64d8ceea21aaf2a6e01-2dc0b1b1038915cc64f54354367e7400.ssl.cf2.rackcdn.com/or-george_harrison_ny_1964.png]]></image>
+					<sort><![CDATA[2]]></sort>
+				</item>
+				<item link_title="Paul McCartney">
+					<name><![CDATA[Paul McCartney]]></name>
+					<title><![CDATA[Composer, All Instruments, Writer]]></title>
+					<image><![CDATA[https://b64d8ceea21aaf2a6e01-2dc0b1b1038915cc64f54354367e7400.ssl.cf2.rackcdn.com/or-paul_mccartney_ny_1964.png]]></image>
+					<phone><![CDATA[392-555-1239]]></phone>
+					<email><![CDATA[george@harrison.com]]></email>
+					<sort><![CDATA[3]]></sort>
+				</item>
+				<item link_title="Ringo Starr">
+					<name><![CDATA[Ringo Starr]]></name>
+					<title><![CDATA[Drummer]]></title>
+					<image><![CDATA[https://b64d8ceea21aaf2a6e01-2dc0b1b1038915cc64f54354367e7400.ssl.cf2.rackcdn.com/or-ringo_starr_ny_1964.png]]></image>
+					<sort><![CDATA[4]]></sort>
+				</item>
+			</items>
+		</dataset>	
+	</ingredients>
+</recipe>

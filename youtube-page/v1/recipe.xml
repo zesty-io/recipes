@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<settings>
+		<text name="account_name" name_friendly="Account Name"><![CDATA[zestywebsites]]></text>
+		<number name="videos_per_row" name_friendly="Videos Per Row"><![CDATA[3]]></number>
+		<number name="show_limit" name_friendly="Number of Videos to Show"><![CDATA[24]]></number>
+		<text name="default_video" name_friendly="Default Video"><![CDATA[Zhr9WmWsezo]]></text>
+		<text name="playlist" name_friendly="Playlist"></text>
+	</settings>
+	
+	<ingredients>
+		<!-- Simple Page Template Set -->	
+		<templateset name="youtube_page" name_friendly="YouTube Page" view="youtube-page">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" />
+			</fields>
+			
+			<items>
+				<item link_title="YouTube" path_part="youtube">
+					<title><![CDATA[YouTube Page]]></title>
+				</item>
+			</items>
+		</templateset>	
+	</ingredients>
+</recipe>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<!-- MENU MAIN PAGE -->
+		<templateset name="menu_page" name_friendly="Menu" view="menu-page">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" sort_table="1" />
+				<wysiwyg_advanced name="content" name_friendly="Page Content" />
+				<images name="image" name_friendly="Header Image" limit="1" />
+			</fields>
+
+			<items>
+				<item link_title="Menu" path_part="menu">
+					<title><![CDATA[The Menu]]></title>
+					<content><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at hendrerit augue. Morbi malesuada turpis et nibh dignissim vel lobortis nisi lobortis. Donec iaculis scelerisque enim, a egestas diam pellentesque a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce ut felis elit.</p>]]></content>
+					<image><![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-restaurant.jpeg]]></image>
+				</item>
+			</items>
+		
+		</templateset>
+		
+		<!-- MENU CATEGORIES -->	
+		<dataset name="menu_categories" name_friendly="Menu Categories" parent_item="menu">
+			<fields>
+				<text name="name" name_friendly="Name" required="1" list="1" />
+				<textarea name="description" name_friendly="Description" />
+				<sort name="sort" name_friendly="Sort Order" list="1" required="1" sort_table="1" />
+			</fields>
+						
+			<items>
+				<item link_title="Breakfast" path_part="breakfast" parent="menu">
+					<name><![CDATA[Breakfast]]></name>
+					<description></description>
+					<sort><![CDATA[1]]></sort>
+				</item>
+				<item link_title="Lunch" path_part="lunch" parent="menu">
+					<name><![CDATA[Lunch]]></name>
+					<description></description>
+					<sort><![CDATA[2]]></sort>
+				</item>
+				<item link_title="Dinner" path_part="dinner" parent="menu">
+					<name><![CDATA[Dinner]]></name>
+					<description></description>
+					<sort><![CDATA[3]]></sort>
+				</item>
+			</items>
+		
+		</dataset>
+		
+		<!-- Articles Page Set-->		
+		<dataset name="menu_items" name_friendly="Menu Items" parent_set="menu_categories">
+			<fields>
+				<text name="name" name_friendly="Name" required="1" list="1" sort_table="1" />
+				<one_to_one name="category" name_friendly="Category" relationship="menu_categories" relationship_field="name" list="1" />
+				<textarea name="description" name_friendly="Description" />
+				<images name="image" name_friendly="Image" list="1" />
+				<currency name="price" name_friendly="Price" list="1" />
+				<yes_no name="featured" name_friendly="Featured" required="1" list="1" options="0:No;1:Yes" />
+				<sort name="sort" name_friendly="Sort Order" required="1" list="1" />
+			</fields>
+						
+			<items>
+				<item link_title="Ham and Eggs">
+					<name><![CDATA[Ham & Eggs]]></name>
+					<category relate="1"><![CDATA[breakfast]]></category>
+					<description><![CDATA[You will get some ham and you will get some eggs.]]></description>
+					<image><![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-sz-320x240-sn32ham-and-eggs.jpg]]></image>
+					<price><![CDATA[8.99]]></price>
+					<featured>1</featured>
+					<sort>1</sort>
+				</item>
+				<item link_title="Pancakes">
+					<name><![CDATA[Pancakes]]></name>
+					<category relate="1"><![CDATA[breakfast]]></category>
+					<description><![CDATA[O they are delicious.]]></description>
+					<image><![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-sz-320x240-pancakes-rooster.jpg]]></image>
+					<price><![CDATA[7.50]]></price>
+					<featured>1</featured>
+					<sort>2</sort>
+				</item>
+				<item link_title="Roast Beef Sandwich">
+					<name><![CDATA[Roast Beef Sandwich]]></name>
+					<category relate="1"><![CDATA[lunch]]></category>
+					<description><![CDATA[Topped with lettuce and tomato, you'll be in heaven.]]></description>
+					<image><![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-sz-320x240-ek0510_roast-beef-sandwich_lg.jpg]]></image>
+					<price><![CDATA[5.80]]></price>
+					<featured>1</featured>
+					<sort>1</sort>
+				</item>
+				<item link_title="Prime Rib">
+					<name><![CDATA[Prime Rib]]></name>
+					<category relate="1"><![CDATA[dinner]]></category>
+					<description><![CDATA[Best steak in town!]]></description>
+					<image><![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-sz-320x240-prime-rib.jpg]]></image>
+					<price><![CDATA[15.45]]></price>
+					<featured>1</featured>
+					<sort>1</sort>
+				</item>
+			</items>
+		</dataset>
+	</ingredients>
+</recipe>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<!-- Simple Page Template Set -->	
+		<templateset name="simple_page" name_friendly="Simple Page" view="simple-page">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" />
+				<wysiwyg_advanced name="content" name_friendly="Page Content" />
+				<images name="image" name_friendly="Page Image" limit="1" />
+			</fields>
+			
+			<items>
+				<item link_title="Page" path_part="page">
+					<title><![CDATA[Example Simple Page]]></title>
+					<content><![CDATA[<p>A Simple Page is often the most common page template on a website and is used for pages with general information. This layout is great for pages such as "About Us," "Mission Statement," "Basic Team Pages," "Service pages," and other simpler pages which don't require a unique layout.&nbsp;</p>
+<p>A standrad page can have:</p>
+<ul>
+<li>Bullet lists</li>
+<li>Can be used with the WYSIWIG</li>
+<li>Along with other content</li>
+</ul>
+<h2>Like Headers</h2>
+<p><img style="float: left;" src="https://b64d8ceea21aaf2a6e01-2dc0b1b1038915cc64f54354367e7400.ssl.cf2.rackcdn.com/or-peppers.jpg" alt="Untitled" width="114" height="76" /></p>
+<p>Paragraphs can have <em>italic</em> and <strong>bold</strong> styles with the WYSIWIG. They may also have inline images along side tables.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="padding-left: 30px;">A standrad page can use indented text for quotes or establishing lists without bullets,&nbsp;</p>
+<p>And&nbsp;<a href="/">links</a>&nbsp;</p>
+<p style="text-align: center;">and centered text</p>
+<p style="text-align: right;">or right aligned text.</p>
+<p>Horizontal Rules:</p>
+<hr />
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4>Here is a Table:</h4>
+<table style="height: 168px;" width="550">
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td><strong>A</strong></td>
+<td><strong>B</strong></td>
+<td><strong>C</strong></td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td>A1</td>
+<td>B1</td>
+<td>C1</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>A2</td>
+<td>B2</td>
+<td>C2</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>A3</td>
+<td>B3</td>
+<td>C3</td>
+</tr>
+</tbody>
+</table>]]></content>
+					<image><![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-peppers.jpg]]></image>
+				</item>
+			</items>
+		</templateset>	
+	</ingredients>
+</recipe>

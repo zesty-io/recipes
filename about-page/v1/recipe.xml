@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<!-- About Page Template Set -->	
+		<templateset name="about_page" name_friendly="About Page" view="about-page">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" />
+				<images name="image" name_friendly="Page Image" limit="1" />
+				<wysiwyg_advanced name="top_content" name_friendly="Top Page Content" />
+				<textarea name="blockquote" name_friendly="Blockquote Text" />
+				<wysiwyg_advanced name="bottom_content" name_friendly="Bottom Content" />
+			</fields>
+			
+			<items>
+				<item link_title="About" path_part="about">
+					<title><![CDATA[About Me]]></title>
+					<image><![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-peppers.jpg]]></image>
+					<top_content><![CDATA[<p>The About page is the section of a website where people go to find out about the website they’re on.</p><p>Readers will visit this section for many reasons and with various questions they want answered, but your objective is the same: to inform them why they are on the site or why they should be on the site.</p>]]></top_content>
+					<blockquote><![CDATA[Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.]]></blockquote>
+					<bottom_content><![CDATA[<h3>Provide the Basics at the Top as an Overview</h3><p>Your About page should answer the <a href="http://en.wikipedia.org/wiki/Five_Ws">Five Ws</a>:</p><ul>
+<li><strong>Who</strong> are you?</li>
+<li><strong>What</strong> do you do?</li>
+<li><strong>When</strong> did you start doing what you’re doing?</li>
+<li><strong>Where</strong> are you?</li>
+<li><strong>How</strong> are you accomplishing what you claim to do?</li>
+</ul><a href="http://sixrevisions.com/content-strategy/about-page-guidelines/">Read More about Writing a great About Page</a>]]></bottom_content>
+				</item>
+			</items>
+		</templateset>	
+	</ingredients>
+</recipe>

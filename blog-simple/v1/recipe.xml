@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<settings>
+		<number name="main_page_limit" name_friendly="Number of Articles to Show on the Main Page"><![CDATA[5]]></number>
+		<number name="category_limit" name_friendly="Number of Categories to show on the side bar"><![CDATA[7]]></number>
+		<number name="recent_articles_limit" name_friendly="Number of Recent Articles to show on the side bar"><![CDATA[3]]></number>
+		<text name="main_page_article_text" name_friendly="Main Page Article Text"><![CDATA[Recent Articles]]></text>
+	</settings>
+	<ingredients>
+		<!-- BLOG MAIN PAGE -->
+		<templateset name="simple_blog_main_page" name_friendly="Blog Page" view="simple-blog-main-page">
+			<fields>
+				<text name="title" name_friendly="Blog Title" required="1" />
+				<wysiwyg_advanced name="description" name_friendly="Blog Description" />
+			</fields>
+			
+			<items>
+				<item link_title="Blog" path_part="blog">
+					<title><![CDATA[Blog Home]]></title>
+					<description><![CDATA[<p>Please enter a description for your blog in the Blog page in Content</p>]]></description>
+				</item>
+			</items>
+		</templateset>
+
+		<!-- Categories Page -->	
+		<templateset name="simple_blog_categories_page" name_friendly="Categories Page" parent_item="blog" view="simple-blog-categories-page">
+			<fields>
+				<text name="title" name_friendly="Category Page Title" required="1" />
+				<wysiwyg_advanced name="description" name_friendly="Category Page Description" />
+			</fields>
+			
+			<items>
+				<item link_title="Categories" path_part="categories" parent="blog">
+					<title><![CDATA[The Categories]]></title>
+					<description><![CDATA[<p>Listing of all the categories</p>]]></description>
+				</item>
+			</items>
+		</templateset>
+
+		
+		<!-- Categories Page Set -->	
+		<pageset name="simple_blog_category" name_friendly="Article Categories" parent_item="blog" view="simple-blog-category">
+			
+			<fields>
+				<text name="name" name_friendly="Category Name" required="1"  list="1" />
+				<sort name="sort_order" name_friendly="Sort Order" list="1" sort_table="1" />
+			</fields>
+			
+			<items>
+				<item link_title="Example Category" path_part="example-category" parent="blog">
+					<name><![CDATA[Example Category]]></name>
+					<sort_order><![CDATA[1]]></sort_order>
+				</item>
+			</items>
+		
+		</pageset>
+		
+		<!-- Articles Page Set-->		
+		<pageset name="simple_blog_article" name_friendly="Articles"  parent_set="simple_blog_category" view="simple-blog-article">
+			<fields>
+				<text name="title" name_friendly="Article Title" required="1" list="1" />
+				<text name="sub_title" name_friendly="Article Sub Title" />
+				<wysiwyg_advanced name="article_body" name_friendly="Article Content" required="1" />
+				<images name="image" name_friendly="Article Image" list="1" limit="1" />
+				<date name="date" name_friendly="Date" required="1" list="1" />
+			</fields>
+			
+			<items>
+				<item link_title="Example Post" path_part="test-post-1" parent="example-category">
+					<title><![CDATA[Hello world!]]></title>
+					<sub_title><![CDATA[This is a test post]]></sub_title>
+					<article_body>
+						<![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus, felis in viverra adipiscing, lorem felis commodo massa, sit amet mollis tellus turpis ac felis. Proin pretium tincidunt diam ut posuere. Praesent non odio tortor, in vehicula risus.</p>]]>
+					</article_body>
+					<date><![CDATA[2013-07-25]]></date>
+				</item>
+			</items>
+		</pageset>
+	</ingredients>
+</recipe>
