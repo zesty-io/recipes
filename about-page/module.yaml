@@ -1,0 +1,32 @@
+type: module
+name: About Page
+author: Zesty.io
+collections:
+ -
+  name: about_page
+  label: About Page
+  fields:
+   -
+    name: title
+    type: text
+    label: Page Title
+    options:
+     required: true
+   -
+    name: image
+    type: images
+    label: Page Image
+    options:
+     limit: 1
+   -
+    name: top_content
+    type: wysiwyg_advanced
+    label: Top Page Content
+   -
+    name: blockquote
+    type: textarea
+    label: Blockquote Text
+   -
+    name: bottom_content
+    type: wysiwyg_advanced
+    label: Bottom Content
