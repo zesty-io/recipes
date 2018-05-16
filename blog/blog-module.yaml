@@ -1,0 +1,91 @@
+type: module
+name: Blog with Authors, Tags, and Categories
+author: Zesty.io
+collections:
+ -
+  name: blog_main_page
+  label: Blog Main Page
+  view: views/blog-main-page.tpl
+  content: contents/blog-page.yaml
+  fields:
+   -
+    name: title
+    type: text
+    label: Blog Title
+    options:
+     required: true
+   -
+    name: description
+    type: wysiwyg_advanced
+    label: Blog Description
+ -
+  name: blog_authors_page
+  label: Authors Page
+  parent: blog_main_page	  # the collection's parent, this organizes config and the navigation layout. For routing, Page parents are set in the contents yaml
+  view: views/blog-authors-page.tpl
+  content: contents/blog-authors.yaml
+  fields:
+   -
+    name: title
+    type: text
+    label: Author Title
+    options:
+     required: true
+   -
+    name: description
+    type: wysiwyg_advanced
+    label: Author Description
+ -
+  name: blog_authors
+  label: Authors
+  parent: blog_authors_page	  # the collection's parent, this organizes config and the navigation layout. For routing, Page parents are set in the contents yaml
+  view: views/blog-author.tpl
+  content: contents/blog-authors.yaml
+  fields:
+   -
+    name: name
+    type: text
+    label: Author Name
+    options:
+     required: true
+     list: true
+     sort_table: true
+   -
+    name: title
+    label: Author Title
+    type: text
+   -
+    name: company
+    label: Author Company
+    type: text
+   -
+    name: email
+    type: text
+    label: Author Email
+    options:
+     required: true
+     list: true
+   -
+    name: image
+    type: images
+    label: Author Photo
+    options:
+     required: true
+     limit: 1
+     list: true
+   -
+    name: description
+    label: Author Description
+    type: wysiwyg_advanced
+   -
+    name: image
+    type: images
+    label: Author Photo
+    options:
+     required: true
+     limit: 1
+     list: true
+   -
+    name: link
+    type: link
+    label: Author URL
