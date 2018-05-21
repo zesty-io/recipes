@@ -5,8 +5,8 @@ collections:
  -
   name: about_page
   label: About Page
+  type: templateset
   hasRoute: true
-  hasView: true
   showAsTable: true
   fields:
    -
