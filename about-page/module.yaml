@@ -5,6 +5,9 @@ collections:
  -
   name: about_page
   label: About Page
+  hasRoute: true
+  hasView: true
+  showAsTable: true
   fields:
    -
     name: title
