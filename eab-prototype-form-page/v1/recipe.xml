@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone='yes'?>
 <recipe>
 	<ingredients>
-		<templateset name="contact_page" name_friendly="Contact" view="contact-page">
+		<templateset name="form_page" name_friendly="Form Page" view="form-page">
 			<fields>
 				<text name="title" name_friendly="Page Title" required="1" />
 				<text name="subtitle" name_friendly="Subtitle" />
