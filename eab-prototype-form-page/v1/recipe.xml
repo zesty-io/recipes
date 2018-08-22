@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<recipe>
+	<ingredients>
+		<templateset name="contact_page" name_friendly="Contact" view="contact-page">
+			<fields>
+				<text name="title" name_friendly="Page Title" required="1" />
+				<text name="subtitle" name_friendly="Subtitle" />
+				<wysiwyg_advanced name="content" name_friendly="Content" />
+				<images name="image" name_friendly="Image" limit="1" />
+			</fields>
+
+			<items>
+				<item link_title="Form Page" path_part="form-page">
+					<title><![CDATA[Sample University]]></title>
+					<subtitle><![CDATA[Welcome User!]]></subtitle>
+					<content><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat quam quis erat tristique pretium. Nunc iaculis lacinia nulla, quis pulvinar lorem rhoncus quis. In adipiscing, sapien blandit dictum pulvinar, massa nisl pretium nunc, vel volutpat nisl leo id justo. Sed ut elit nulla. Vestibulum pharetra est sit amet odio</p>]]></content>
+					<image><![CDATA[https://4n00qgck.media.zestyio.com/SAMPLE_PDF2.png]]></image>
+				</item>
+			</items>
+		</templateset>
+	</ingredients>
+</recipe>
