@@ -4,35 +4,19 @@
 		<templateset name="contact_page" name_friendly="Contact" view="contact-page">
 			<fields>
 				<text name="title" name_friendly="Page Title" required="1" />
-				<text name="location_name" name_friendly="Location Name" />
-				<text name="address" name_friendly="Street Address" />			
-				<text name="city" name_friendly="City" />
-				<text name="state" name_friendly="State" />
-				<text name="zip" name_friendly="Zip" />
-				<text name="phone" name_friendly="Phone" />
-				<text name="fax" name_friendly="Fax Number" />
-				<text name="email" name_friendly="Email" />
-				<textarea name="link_to_map" name_friendly="Link to Google Map Page" />
-				<images name="backup_photo" name_friendly="Image if there is not a location" limit="1" />
-				<textarea name="hours" name_friendly="hours" />
+				<text name="subtitle" name_friendly="Subtitle" />
+				<wysiwyg_advanced name="content" name_friendly="Content" />
+				<images name="image" name_friendly="Image" limit="1" />
 			</fields>
-			
+
 			<items>
-				<item link_title="Contact" path_part="contact">
-					<title><![CDATA[Contact Us]]></title>
-					<location_name><![CDATA[Zesty]]></location_name>
-					<address><![CDATA[1045 6th Avenue]]></address>
-					<city><![CDATA[Zesty HQ]]></city>
-					<state><![CDATA[CA]]></state>
-					<zip><![CDATA[92101]]></zip>
-					<phone><![CDATA[888-888-8888]]></phone>
-					<fax><![CDATA[999-999-9999]]></fax>
-					<email><![CDATA[info@gozesty.com]]></email>
-					<link_to_map><![CDATA[https://maps.google.com/maps?q=variable+action&hl=en&ll=32.780347,-117.16713&spn=0.518989,1.050568&sll=32.824552,-117.108978&sspn=0.699338,1.229095&t=p&hq=variable+action&z=11&iwloc=A&lci=transit_comp]]></link_to_map>
-					<backup_photo><![CDATA[http://upload.wikimedia.org/wikipedia/en/1/13/Lunch-atop-a-skyscraper-c1932.jpg]]></backup_photo>
-					<hours><![CDATA[Monday-Friday all day]]></hours>
+				<item link_title="Form Page" path_part="form-page">
+					<title><![CDATA[Sample University]]></title>
+					<subtitle><![CDATA[Welcome User!]]></subtitle>
+					<content><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat quam quis erat tristique pretium. Nunc iaculis lacinia nulla, quis pulvinar lorem rhoncus quis. In adipiscing, sapien blandit dictum pulvinar, massa nisl pretium nunc, vel volutpat nisl leo id justo. Sed ut elit nulla. Vestibulum pharetra est sit amet odio</p>]]></content>
+					<image><![CDATA[https://4n00qgck.media.zestyio.com/SAMPLE_PDF2.png]]></image>
 				</item>
 			</items>
-		</templateset>	
+		</templateset>
 	</ingredients>
 </recipe>
