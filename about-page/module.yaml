@@ -1,7 +1,7 @@
 type: module
 name: About Page
 author: Zesty.io
-collections:
+models:
  -
   name: about_page
   label: About Page
